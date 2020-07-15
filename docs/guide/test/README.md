@@ -6,7 +6,6 @@ categories:
 tags:
  - vue
 ---
-![An image](../../img.jpg)
 
 ### web-py 一个浏览器控制台的聊天工具。
 
