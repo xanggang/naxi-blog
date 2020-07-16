@@ -17,6 +17,6 @@ FROM nginx:latest
 WORKDIR /app
 
 # 复制到nginx镜像下
-COPY --from=builder /app/dist/ /app/
+COPY --from=builder /app/docs/.vuepress/dist/ /app/
 
 COPY nginx.conf /etc/nginx/nginx.conf
