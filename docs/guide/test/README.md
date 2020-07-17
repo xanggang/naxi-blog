@@ -1,10 +1,10 @@
 ---
-title: 【vue】跨域解决方案之proxyTable
-date: 2017-12-28
+title: web-py 一个浏览器控制台的聊天工具。
+date: 2020-07-15
 categories:
- - frontEnd
+ - 独立项目
 tags:
- - vue
+ - js
 ---
 
 ### web-py 一个浏览器控制台的聊天工具。

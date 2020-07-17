@@ -1,10 +1,11 @@
 ---
-title: 【使用jenkins自动构建和部署web项目
+title: 使用jenkins自动构建和部署web项目
 date: 2020-07-15
 categories:
- - node
+ - 生态
 tags:
- - vue
+ - jenkins
+ - ci
 ---
 
 # 使用jenkins自动构建和部署web项目
@@ -104,3 +105,76 @@ docker stop egg || true \
 ![An image](./10.jpg)
 
 #### 使用nginx启动vuepress博客
+在项目根目录添加Dockerfile文件
+```dockerfile
+FROM node:alpine as builder
+
+WORKDIR /app
+
+COPY /package.json /app/
+
+RUN npm install -g cnpm --registry=https://registry.npm.taobao.org
+RUN cnpm install
+
+COPY . /app/
+
+# 打包
+RUN npm run build
+
+FROM nginx:latest
+
+WORKDIR /app
+
+# 复制到nginx镜像下
+# 注意vuepress的打包目录
+COPY --from=builder /app/docs/.vuepress/dist/ /app/ 
+
+# 使用根项目下的nginx配置
+COPY nginx.conf /etc/nginx/nginx.conf
+
+```
+
+```
+user  nginx;
+worker_processes  1;
+error_log  /var/log/nginx/error.log warn;
+pid        /var/run/nginx.pid;
+
+events {
+  worker_connections  1024;
+}
+
+http {
+  include       /etc/nginx/mime.types;
+  default_type  application/octet-stream;
+  log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
+  '$status $body_bytes_sent "$http_referer" '
+  '"$http_user_agent" "$http_x_forwarded_for"';
+  access_log  /var/log/nginx/access.log  main;
+  sendfile        on;
+  keepalive_timeout  65;
+  server {
+    listen       80;
+    location / {
+      root   /app;  # 指向目录
+      index  index.html;
+      try_files $uri $uri/ /index.html;
+    }
+    error_page   500 502 503 504  /50x.html;
+    location = /50x.html {
+      root   /usr/share/nginx/html;
+    }
+  }
+}
+
+```
+在jenkins中构建， 选择执行shell
+``` shell script
+docker stop egg || true \
+ &&  docker rm egg || true \
+ &&  docker rmi egg || true \
+ &&  cd /var/jenkins_home/workspace/egg  \
+ &&  docker build --rm --no-cache=true  -t egg . \
+ &&  docker run -d --privileged=true --name egg -p 9100:7001 egg
+```
+![An image](./10.jpg)
