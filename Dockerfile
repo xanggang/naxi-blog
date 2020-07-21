@@ -5,7 +5,7 @@ WORKDIR /app
 COPY /package.json /app/
 
 RUN npm config set registry http://47.96.139.86:9007
-RUN cnpm install
+RUN npm install
 
 COPY . /app/
 
