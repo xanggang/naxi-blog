@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY /package.json /app/
 
-RUN npm install -g cnpm --registry=https://registry.npm.taobao.org
+RUN npm install -g cnpm --registry=http://47.96.139.86:9007
 RUN cnpm install
 
 COPY . /app/

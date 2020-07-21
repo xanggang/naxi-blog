@@ -10,7 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "vuepress": "^1.5.2"
+    "vuepress": "^1.5.2",
+    "web-py": "^1.0.5"
   },
   "devDependencies": {
     "vuepress-theme-reco": "^1.5.3"

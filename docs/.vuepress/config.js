@@ -26,5 +26,20 @@ module.exports = {
       clientId: 'fc43564cb98c393b9935',
       clientSecret: '451e6dd58866ca477d249313f8c6225cdc093067',
     }
+  },
+  configureWebpack: (config, isServer) => {
+    if (!isServer) {
+      return {
+        devServer: {
+          port: 9001,
+          proxy: {
+            '/': {
+              target: 'http://47.96.139.86:9100',
+              changeOrigin: true
+            }
+          }
+        },
+      }
+    }
   }
 }
