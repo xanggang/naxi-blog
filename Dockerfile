@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY /package.json /app/
 
-RUN npm install web-py --registry http://47.96.139.86:9007
+RUN npm install web-py --registry=http://47.96.139.86:9007
 RUN npm config set registry https://registry.npm.taobao.org
 RUN npm install
 
