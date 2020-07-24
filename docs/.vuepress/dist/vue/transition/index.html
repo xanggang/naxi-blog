@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>vue 巧用过渡效果</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    
+    <meta name="description" content="">
+    <link rel="preload" href="/assets/css/0.styles.658b6a01.css" as="style"><link rel="preload" href="/assets/js/app.0d469d9b.js" as="script"><link rel="preload" href="/assets/js/3.51331362.js" as="script"><link rel="preload" href="/assets/js/1.e9932127.js" as="script"><link rel="preload" href="/assets/js/15.54b9a113.js" as="script"><link rel="prefetch" href="/assets/js/10.9771684f.js"><link rel="prefetch" href="/assets/js/11.0993bb02.js"><link rel="prefetch" href="/assets/js/12.294ab42c.js"><link rel="prefetch" href="/assets/js/13.8faa8db8.js"><link rel="prefetch" href="/assets/js/14.bc7f6d74.js"><link rel="prefetch" href="/assets/js/16.5cac697a.js"><link rel="prefetch" href="/assets/js/4.5c5cd527.js"><link rel="prefetch" href="/assets/js/5.49397799.js"><link rel="prefetch" href="/assets/js/6.3939005b.js"><link rel="prefetch" href="/assets/js/7.39071c89.js"><link rel="prefetch" href="/assets/js/8.fd3c366a.js"><link rel="prefetch" href="/assets/js/9.3419800d.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.658b6a01.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-dad8a512><div data-v-dad8a512><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-dad8a512 data-v-dad8a512><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-64685f0e data-v-dad8a512 data-v-dad8a512><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e></h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><!---->
+            
+          <!---->
+          2020
+        </a></span></div></div> <div class="hide" data-v-dad8a512><header class="navbar" data-v-dad8a512><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/img.jpg" alt="" class="logo"> <!----></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      Category
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/生态/" class="nav-link"><i class="iconfont undefined"></i>
+  生态
+</a></li><li class="dropdown-item"><!----> <a href="/categories/vue/" class="nav-link"><i class="iconfont undefined"></i>
+  vue
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-dad8a512></div> <aside class="sidebar" data-v-dad8a512><div class="personal-info-wrapper" data-v-ca798c94 data-v-dad8a512><!----> <!----> <div class="num" data-v-ca798c94><div data-v-ca798c94><h3 data-v-ca798c94>4</h3> <h6 data-v-ca798c94>Article</h6></div> <div data-v-ca798c94><h3 data-v-ca798c94>6</h3> <h6 data-v-ca798c94>Tag</h6></div></div> <hr data-v-ca798c94></div> <nav class="nav-links"><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      Category
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/生态/" class="nav-link"><i class="iconfont undefined"></i>
+  生态
+</a></li><li class="dropdown-item"><!----> <a href="/categories/vue/" class="nav-link"><i class="iconfont undefined"></i>
+  vue
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-64685f0e data-v-dad8a512><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>vue 巧用过渡效果</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><!---->
+            
+          <!---->
+          2020
+        </a></span></div></div> <div data-v-dad8a512><main class="page"><div class="page-title" style="display:none;"><h1>vue 巧用过渡效果</h1> <hr> <div data-v-aa64b9d0><!----> <i class="iconfont reco-date" data-v-aa64b9d0><span data-v-aa64b9d0>2020-07-15</span></i> <!----> <i class="iconfont reco-tag tags" data-v-aa64b9d0><span class="tag-item" data-v-aa64b9d0>vue</span><span class="tag-item" data-v-aa64b9d0>动画</span></i></div></div> <div class="theme-reco-content content__default" style="display:none;"><p>vue提供的了transition组件来实现组件的过渡和路由的过渡，合理使用这个组建可以让我们的页面更加的灵活，提高用户体验。</p> <h3 id="概念"><a href="#概念" class="header-anchor">#</a> 概念</h3> <p>在进入/离开的过渡中， 会有6个class的切换， 抄一张官方的图
+<img src="1.jpg" alt=""></p> <blockquote><p>v-enter：定义进入过渡的开始状态。在元素被插入之前生效，在元素被插入之后的下一帧移除。</p></blockquote> <blockquote><p>v-enter-active：定义进入过渡生效时的状态。在整个进入过渡的阶段中应用，在元素被插入之前生效，在过渡/动画完成之后移除。这个类可以被用来定义进入过渡的过程时间，延迟和曲线函数。</p></blockquote> <blockquote><p>v-enter-to: 2.1.8版及以上 定义进入过渡的结束状态。在元素被插入之后下一帧生效 (与此同时 v-enter 被移除)，在过渡/动画完成之后移除。</p></blockquote> <blockquote><p>v-leave: 定义离开过渡的开始状态。在离开过渡被触发时立刻生效，下一帧被移除。</p></blockquote> <blockquote><p>v-leave-active：定义离开过渡生效时的状态。在整个离开过渡的阶段中应用，在离开过渡被触发时立刻生效，在过渡/动画完成之后移除。这个类可以被用来定义离开过渡的过程时间，延迟和曲线函数。</p></blockquote> <blockquote><p>v-leave-to: 2.1.8版及以上 定义离开过渡的结束状态。在离开过渡被触发之后下一帧生效 (与此同时 v-leave 被删除)，在过渡/动画完成之后移除。</p></blockquote> <p>看起来还是有有点乱，先来捋一下。</p> <p><img src="2.jpg" alt=""></p> <p>enter 定义开始的状态， active定义过程， enter定义结束， 但是在实际进行的时候是有交叉的。
+通过断点可以发现，</p> <ul><li>添加v-enter</li> <li>添加v-enter-active,</li> <li>卸载v-enter</li> <li>添加v-ernter-to</li> <li>卸载v-enter-to和v-enter-active</li></ul> <div class="language- extra-class"><pre class="language-text"><code>// transition: all 2s; 
+    .move-enter {
+      margin-left: 0;
+    }
+    .move-enter-active {
+       margin-left: 100px;
+    }
+    .move-enter-to {
+      margin-left: 200px;
+    }
+</code></pre></div><p>例如在上面这种情况下， 过渡动画会怎么进行呢？</p> <p><img src="3.gif" alt=""></p> <p>这里要注意两点。</p> <ul><li>enter-active覆盖掉了enter的起点位置</li> <li>一共经过了两次过渡， enter-to是在active结束之后开始的， 所以第四秒， 才回到dom元素本身的位置。</li></ul> <p>所以官方文档之， 也是使用v-enter定义起点位置， 在enter-active中控制效果。</p> <h3 id="利用class实现过渡效果"><a href="#利用class实现过渡效果" class="header-anchor">#</a> 利用class实现过渡效果</h3> <p>在这6个class之上， 利用transition或者动画， 都可以实现我们需要的效果。
+举个栗子， 这里我们直接将所有的路由改变都定义一个过渡效果，</p> <blockquote><p>appear属性表示页面初次加载的时候也适用于动画</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>    &lt;transition appear name=&quot;move&quot;&gt;
+        &lt;router-view&gt;&lt;/router-view&gt;
+    &lt;/transition&gt;
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>@keyframes animationIn {
+  0% {
+    transform: translate(-100%, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes animationOut {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(100%, 0);
+  }
+}
+
+.move-enter {
+  transform: translate(-100%, 0);
+  position: absolute!important;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.move-enter-active {
+  animation: animationIn 0.2s;
+  position: absolute!important; // 进入的组件要覆盖掉移除的组件，参考 //https://cn.vuejs.org/v2/guide/transitions.html#%E8%BF%87%E6%B8%A1%E6%A8%A1%E5%BC%8F
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.move-leave {
+  transform: translate(0, 0);
+}
+.move-leave-active {
+  animation: animationOut 0.2s;
+}
+
+</code></pre></div><p>效果
+<img src="4.gif" alt=""></p> <h3 id="javascript-钩子"><a href="#javascript-钩子" class="header-anchor">#</a> JavaScript 钩子</h3> <p>这些钩子函数可以结合 CSS transitions/animations 使用</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;transition
+  v-on:before-enter=&quot;beforeEnter&quot;
+  v-on:enter=&quot;enter&quot;
+  v-on:after-enter=&quot;afterEnter&quot;
+  v-on:enter-cancelled=&quot;enterCancelled&quot;
+
+  v-on:before-leave=&quot;beforeLeave&quot;
+  v-on:leave=&quot;leave&quot;
+  v-on:after-leave=&quot;afterLeave&quot;
+  v-on:leave-cancelled=&quot;leaveCancelled&quot;
+&gt;
+  &lt;!-- ... --&gt;
+&lt;/transition&gt;
+</code></pre></div><p>在这些钩子中， 可以使用其他第三方库，回调中的el将是真实的dom元素
+举个栗子, 这里使用了官方推荐的Velocity.js作为动画库</p> <div class="language- extra-class"><pre class="language-text"><code>    &lt;div class=&quot;main&quot;&gt;
+      &lt;transition name=&quot;showRect&quot; appear
+                  @before-enter=&quot;handleBeforeEnter&quot;
+                  @enter=&quot;handleEnter&quot;
+                  @after-enter=&quot;handleAfterEnter&quot;
+                  @before-leave=&quot;handleBeforeLeave&quot;
+                  @leave=&quot;handleLeave&quot;
+                  @after-leave=&quot;handleAfterLeave&quot;
+                  :css=&quot;false&quot;&gt;
+        &lt;div class=&quot;box&quot; v-if=&quot;show&quot;&gt;&lt;/div&gt;
+      &lt;/transition&gt;
+    &lt;/div&gt;
+    &lt;button @click=&quot;start&quot;&gt;切换&lt;/button&gt;
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>       methods: {
+      start() {
+        this.show = !this.show
+      },
+      handleBeforeEnter: function (el) {
+        el.style.opacity = 0;
+        console.log('方块显示动画即将执行');
+      },
+      handleEnter: function (el, done) {
+        Velocity(el, 'stop');
+        Velocity(el, {
+          backgroundColor: '#0085eb',
+          opacity: 1,
+          translateX: 260,
+          rotateZ: ['360deg', 0]
+        }, {
+          duration: 1000,
+          easing: [ 0.4, 0.01, 0.165, 0.99 ],
+          complete: done
+        });
+        console.log('方块显示动画执行中...');
+      },
+      handleAfterEnter: function (el) {
+        console.log('方块显示动画结束');
+      },
+      handleBeforeLeave: function (el) {
+        console.log('方块隐藏动画即将执行');
+      },
+      handleLeave: function (el, done) {
+        Velocity(el, 'stop');
+        Velocity(el, {
+          backgroundColor: '#4dd0e1',
+          opacity: 0,
+          translateX: 0,
+          rotateZ: [0, '360deg']
+        }, {
+          duration: 1000,
+          easing: [ 0.4, 0.01, 0.165, 0.99 ],
+          complete: done
+        });
+        console.log('方块隐藏动画执行中...');
+      },
+      handleAfterLeave: function (el) {
+        console.log('方块隐藏动画结束');
+      }
+    }
+</code></pre></div><p><img src="4.gif" alt=""></p> <h3 id="列表过渡"><a href="#列表过渡" class="header-anchor">#</a> 列表过渡</h3> <p>vue还提供了transition-group组件， 作为列表过渡的容器</p> <blockquote><p>不同于 <code>&lt;transition&gt;</code>，它会以一个真实元素呈现：默认为一个 <code>&lt;span&gt;</code>。你也可以通过 tag 特性更换为其他元素</p></blockquote> <blockquote><p>transition-group 拥特别的v-move属性，它会在元素的改变定位的过程中应用， 效果可参见官网。</p></blockquote> <p>其他的就不抄官网了</p> <h5 id="列表过渡中，-可以结合js钩子，-实现一些特殊的效果"><a href="#列表过渡中，-可以结合js钩子，-实现一些特殊的效果" class="header-anchor">#</a> 列表过渡中， 可以结合js钩子， 实现一些特殊的效果</h5> <p>举个栗子</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;template&gt;
+  &lt;div&gt;
+    &lt;div class=&quot;btn&quot; @click=&quot;addItem&quot;&gt;添加&lt;/div&gt;
+    &lt;div class=&quot;btn&quot; @click=&quot;sort&quot;&gt;排序&lt;/div&gt;
+    &lt;div class=&quot;box&quot;&gt;
+      &lt;div class=&quot;item-bar&quot;&gt;
+        &lt;transition-group name=&quot;fade&quot; tag=&quot;p&quot; appear
+        v-on:before-enter=&quot;beforeEnter&quot;
+        v-on:after-enter=&quot;afterEnter&quot;&gt;
+        // 这里的data-index 是一个识别标识， 便于在js钩子中获得当前元素的序号
+          &lt;div class=&quot;item&quot; v-for=&quot;(i, index) in list&quot; :key=&quot;i&quot; :data-index=&quot;index&quot;&gt;{{i}}&lt;/div&gt;
+        &lt;/transition-group&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>&lt;script lang=&quot;ts&quot;&gt;
+  import Vue from &quot;vue&quot;;
+  export default Vue.extend({
+    name: &quot;home&quot;,
+    data() {
+      return {
+        show: true,
+        list: [5,4,3,2,1],
+        nextNum: 6
+      };
+    },
+    methods: {
+      showDom() {
+        this.show = !this.show
+      },
+      beforeEnter: function (el: any) {
+        el.style.opacity = 0 // 每个元素插入之前， 透明度为0
+        let index = el.dataset.index  每次可能插入多个元素，
+        // 页面加载时先展示5个
+        if (index &lt; 5) {
+            //设置动画延迟， 实现按续插入的效果
+          el.style.animationDelay = el.dataset.index * 0.3 + 's'
+        }
+      },
+      afterEnter: function (el) {
+        el.style.opacity = 1
+        console.log('afterEnter')
+      },
+      addItem() {
+        this.list.push(this.nextNum++)
+      },
+      sort() {
+        this.list = this.list.sort((a, b) =&gt; a -b)
+      }
+    }
+  });
+&lt;/script&gt;
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code> @keyframes animat {
+    0% {
+      margin-left: 300px;
+      opacity: 0;
+    }
+    100% {
+      margin-left: 0;
+      opacity: 1;
+    }
+  }
+  .fade-enter {
+    opacity: 0;
+    margin-left: 300px;
+  }
+  .fade-enter-active {
+    opacity: 0;
+    animation: animat 1s;
+  }
+  .fade-enter-to {
+    opacity: 1;
+    margin-left: 0;
+  }
+
+  .fade-move {
+    transition: all 0.3s;
+  }
+  .fade-leave {
+    left: 10px;
+  }
+  .fade-leave-active {
+    transition: all 2s ease-out;
+  }
+  .fade-leave-to {
+    left: -100%;
+  }
+</code></pre></div><p>效果</p> <p><img src="5.jpg" alt=""></p> <blockquote><p>原文发表在掘金<a> https://juejin.im/post/5ba3583b5188255c6a043671 </a>, 然后搬回来的时候gif全都不能动了。
+这边文章就在这里做一个备份吧</p></blockquote></div> <footer class="page-edit" style="display:none;"><!----> <!----></footer> <!----> <!----> <ul class="side-bar sub-sidebar-wrapper" style="width:12rem;" data-v-40a3448a><li class="level-3" data-v-40a3448a><a href="/vue/transition/#概念" class="sidebar-link" data-v-40a3448a>概念</a></li><li class="level-3" data-v-40a3448a><a href="/vue/transition/#利用class实现过渡效果" class="sidebar-link" data-v-40a3448a>利用class实现过渡效果</a></li><li class="level-3" data-v-40a3448a><a href="/vue/transition/#javascript-钩子" class="sidebar-link" data-v-40a3448a>JavaScript 钩子</a></li><li class="level-3" data-v-40a3448a><a href="/vue/transition/#列表过渡" class="sidebar-link" data-v-40a3448a>列表过渡</a></li></ul></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-44bd5a18 data-v-44bd5a18><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-44bd5a18><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-44bd5a18></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-44bd5a18></path></svg></div></div></div>
+    <script src="/assets/js/app.0d469d9b.js" defer></script><script src="/assets/js/3.51331362.js" defer></script><script src="/assets/js/1.e9932127.js" defer></script><script src="/assets/js/15.54b9a113.js" defer></script>
+  </body>
+</html>
