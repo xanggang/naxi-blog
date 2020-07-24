@@ -1,20 +1,22 @@
 <template>
-  <div>
-    <h1>
-      0000
-    </h1>
-    text
-  </div>
+  <div></div>
 </template>
 
 <script>
-  import webPy from 'web-py'
-  export default {
-    name: "TextCom",
-    mounted() {
-      if (!window.d) {
-        webPy.init('http://47.96.139.86:9100')
-      }
+export default {
+  name: "TextCom",
+  data() {
+    return {
+      dynamicComponent: null
+    }
+  },
+  mounted() {
+    if (!window.d) {
+      import('web-py').then(module => {
+        module.default.init('http://47.96.139.86:9100')
+        // console.log(module.default);
+      })
     }
   }
+}
 </script>
