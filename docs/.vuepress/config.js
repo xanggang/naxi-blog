@@ -3,7 +3,7 @@ module.exports = {
   themeConfig: {
     logo: '/img.jpg',
     type: 'blog',
-    heroText: 'nihao',
+    heroText: 'lynn的书桌',
     // 博客配置
     blogConfig: {
       category: {
