@@ -39,22 +39,13 @@ module.exports = {
     startYear: '2020',
   },
 
-  // 备案
-  record: 'ICP 备案文案',
-  recordLink: 'ICP 备案指向链接',
-  cyberSecurityRecord: '公安部备案文案',
-  cyberSecurityLink: '公安部备案指向链接',
-  // 项目开始时间，只填写年份
-  startYear: '2017',
-
   configureWebpack: (config, isServer) => {
     if (!isServer) {
       return {
         devServer: {
-          port: 9001,
           proxy: {
             '/': {
-              target: 'http://47.96.139.86:9100',
+              target: 'http://api.lynn.cool',
               changeOrigin: true
             }
           }

@@ -13,7 +13,7 @@ export default {
   mounted() {
     if (!window.d) {
       import('web-py').then(module => {
-        module.default.init('http://47.96.139.86:9100')
+        module.default.init('http://api.lynn.cool')
         // console.log(module.default);
       })
     }
