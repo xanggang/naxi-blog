@@ -1,7 +1,8 @@
 module.exports = {
   theme: 'reco',
   themeConfig: {
-    logo: '/img.jpg',
+    logo: '/logo.jpg',
+    authorAvatar: '/logo.jpg',
     type: 'blog',
     heroText: 'lynn的书桌',
     // 博客配置
@@ -19,14 +20,33 @@ module.exports = {
       { text: 'TimeLine', link: '/timeline/', icon: 'reco-date' }
     ],
 
+    author: 'lynn',
+    huawei: true,
+
     vssueConfig: {
       platform: 'github',
       owner: 'xanggang',
       repo: 'note-house-issues',
       clientId: 'fc43564cb98c393b9935',
       clientSecret: '451e6dd58866ca477d249313f8c6225cdc093067',
-    }
+    },
+
+    record: '浙ICP备20027145号',
+    recordLink: 'ICP 备案指向链接',
+    // cyberSecurityRecord: '公安部备案文案',
+    // cyberSecurityLink: '公安部备案指向链接',
+    // 项目开始时间，只填写年份
+    startYear: '2020',
   },
+
+  // 备案
+  record: 'ICP 备案文案',
+  recordLink: 'ICP 备案指向链接',
+  cyberSecurityRecord: '公安部备案文案',
+  cyberSecurityLink: '公安部备案指向链接',
+  // 项目开始时间，只填写年份
+  startYear: '2017',
+
   configureWebpack: (config, isServer) => {
     if (!isServer) {
       return {
