@@ -18,7 +18,7 @@ docker run -d -p 80:80 \
     -v /root/nginx-data/logs:/var/log/nginx \
     -v /root/nginx-data/config/nginx.conf:/etc/nginx/nginx.conf \
     -v /root/nginx-data/conf.d:/etc/nginx/conf.d \
-    -v /root/nginx-data/www:/usr/web \
+    -v /root/nginx-data/www:/usr/share/nginx/ \
     --name nginx \
     nginx
 ```
