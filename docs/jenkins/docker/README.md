@@ -1,5 +1,5 @@
 ---
-title: 使用docker快速安装服务器环境
+title: 使用docker快速安装服务器环境1
 date: 2020-07-15
 categories:
  - 生态
