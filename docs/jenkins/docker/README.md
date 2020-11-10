@@ -41,7 +41,7 @@ service docker stop     // 停止docker服务
 vi /var/lib/jenkins/updates/default.json
 ```
 ```
- docker run -d -u 0 --privileged  --name my-jenkins -p 9001:8080 -v /root/jenkins_node:/var/jenkins_home -v /usr/bin/docker:/usr/bin/docker -v /var/run/docker.sock:/var/run/docker. -v /root/nginx-data/www/:/usr/src/ docker/jenkins
+docker run -d -u 0 --privileged  --name jenkins -p 9001:8080 -v /root/jenkins_node:/var/jenkins_home -v /usr/bin/docker:/usr/bin/docker -v /var/run/docker.sock:/var/run/docker.sock -v /root/nginx-data/www/:/usr/src/ jenkins/jenkins:lts
  将Jenkins内部的/usr/src/挂载到外部nginx的www文件， 用于将打包好的web文件放在nginx内部去j
 ```
 6. 使用docker安装可视化管理工具
