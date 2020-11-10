@@ -18,7 +18,7 @@
 #WORKDIR /app
 #
 ## 复制到nginx镜像下
-#COPY --from=builder /app/docs/.vuepress/dist/ /app/
+#COPY --from=builder /var/jenkins_home/workspace/note-house/docs/.vuepress/dist/ /app/
 #
 #COPY nginx.conf /etc/nginx/nginx.conf
 

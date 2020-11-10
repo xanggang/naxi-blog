@@ -42,7 +42,7 @@ vi /var/lib/jenkins/updates/default.json
 ```
 ```
  docker run -d -u 0 --privileged  --name my-jenkins -p 9001:8080 -v /root/jenkins_node:/var/jenkins_home -v /usr/bin/docker:/usr/bin/docker -v /var/run/docker.sock:/var/run/docker. -v /root/nginx-data/www/:/usr/src/ docker/jenkins
- 将Jenkins内部的/usr/src/挂载到外部nginx的www文件， 用于将打包好的web文件放在nginx内部去
+ 将Jenkins内部的/usr/src/挂载到外部nginx的www文件， 用于将打包好的web文件放在nginx内部去j
 ```
 6. 使用docker安装可视化管理工具
 
@@ -85,14 +85,3 @@ ALTER USER 'root'@'%' IDENTIFIED BY 'password' PASSWORD EXPIRE NEVER;
 ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY 'password';
 4.刷新：
 FLUSH PRIVILEGES;
-
- docker run -d -u 0 --privileged  --name my-jenkins -p 9001:8080 -v /root/jenkins_node:/var/jenkins_home -v /usr/bin/docker:/usr/bin/docker -v /var/run/docker.sock:/var/run/docker. -v /root/nginx-data/www/:/usr/src/ docker/jenkins
- 
- 
- 
- 74cf3977db1c805d8508fe8f0e9edf7bb3aaaa06
- 
- 
- 用户的token 11de30785f9c922dcedf45d8f6e9123883note-house
- http://github:11de30785f9c922dcedf45d8f6e9123883note-house@101.37.203.72:9001/job//build?token=naxi20201106
- 
