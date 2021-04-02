@@ -1,5 +1,5 @@
 ---
-title: 一些冷门的知识手机
+title: 一些冷门的知识收集
 date: 2020-07-28
 categories:
  - html
