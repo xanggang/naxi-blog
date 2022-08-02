@@ -32,7 +32,7 @@ module.exports = {
     },
 
     record: '浙ICP备20027145号',
-    recordLink: 'ICP 备案指向链接',
+    recordLink: 'Ihttps://beian.miit.gov.cn/',
     // cyberSecurityRecord: '公安部备案文案',
     // cyberSecurityLink: '公安部备案指向链接',
     // 项目开始时间，只填写年份
