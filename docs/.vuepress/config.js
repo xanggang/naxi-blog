@@ -31,10 +31,10 @@ module.exports = {
       clientSecret: '451e6dd58866ca477d249313f8c6225cdc093067',
     },
 
-    record: '浙ICP备20027145号',
-    recordLink: 'Ihttps://beian.miit.gov.cn/',
-    // cyberSecurityRecord: '公安部备案文案',
-    // cyberSecurityLink: '公安部备案指向链接',
+    record: '浙ICP备20027145号-2',
+    recordLink: 'https://beian.miit.gov.cn/',
+    cyberSecurityRecord: '公安部备案文案',
+    cyberSecurityLink: '公安部备案指向链接',
     // 项目开始时间，只填写年份
     startYear: '2020',
   },
